@@ -1,0 +1,9 @@
+{
+  "rewrites": [{ "source": "/((?!files/|assets/).*)", "destination": "/index.html" }],
+  "headers": [
+    {
+      "source": "/files/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }]
+    }
+  ]
+}
