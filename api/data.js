@@ -16,7 +16,11 @@ export default async function handler(req, res) {
     res.setHeader("Cache-Control", "public, max-age=0, must-revalidate");
     res.setHeader("CDN-Cache-Control", "public, s-maxage=60, stale-while-revalidate=86400");
     res.setHeader("Vercel-Cache-Tag", DATA_TAG);
-    await addCacheTag(DATA_TAG).catch(() => {});
+    try {
+      await addCacheTag(DATA_TAG);
+    } catch {
+      /* kesh tegi ixtiyoriy */
+    }
     res.status(200).json({
       months: months.map((m) => ({ id: m.id, name: m.name, desc: m.desc, order: m.order })),
       lessons: lessons.map(shapeLesson),
