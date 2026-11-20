@@ -1,5 +1,3 @@
-import { useEffect, useState, useCallback } from "react";
-
 export const MONTHS = [
   { id: 1, name: "1-oy", desc: "HTML va CSS asoslari" },
   { id: 2, name: "2-oy", desc: "Joylashuv va effektlar" },
@@ -31,44 +29,22 @@ export const LEVELS = {
   },
 };
 
-const KEY = "uyga-vazifalar:done";
-
-function readDone() {
-  try {
-    const raw = localStorage.getItem(KEY);
-    const arr = raw ? JSON.parse(raw) : [];
-    return Array.isArray(arr) ? arr : [];
-  } catch {
-    return [];
-  }
-}
-
-export function useProgress() {
-  const [done, setDone] = useState(readDone);
-
-  useEffect(() => {
-    const sync = (e) => {
-      if (e.key === KEY) setDone(readDone());
-    };
-    window.addEventListener("storage", sync);
-    return () => window.removeEventListener("storage", sync);
-  }, []);
-
-  const toggle = useCallback((id) => {
-    setDone((prev) => {
-      const next = prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id];
-      try {
-        localStorage.setItem(KEY, JSON.stringify(next));
-      } catch {
-        /* xotira mavjud emas */
-      }
-      return next;
-    });
-  }, []);
-
-  return { done, toggle, isDone: (id) => done.includes(id) };
-}
-
 export function fileName(src) {
   return src.split("/").pop();
+}
+
+// Keyingi darsning rasmlarini oldindan (fonda) yuklab qo'yish
+const prefetched = new Set();
+export function prefetchLesson(lesson) {
+  if (!lesson) return;
+  lesson.tasks.forEach((t) =>
+    t.items.forEach((it) => {
+      const url = it.view || it.poster;
+      if (!url || prefetched.has(url)) return;
+      prefetched.add(url);
+      const img = new Image();
+      img.decoding = "async";
+      img.src = url;
+    })
+  );
 }

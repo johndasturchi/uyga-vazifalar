@@ -1,5 +1,4 @@
-// Darslar ro'yxati. Yangi dars qo'shish uchun shu ro'yxatga yangi obyekt qo'shing
-// va rasmlarini public/files/lessons papkasiga joylang.
+// Darslar ro'yxati. Yangi dars qo'shish tartibi README.md faylida yozilgan.
 
 export const lessons = [
   {
@@ -12,7 +11,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson1_1.png"
+            "src": "/files/lessons/lesson1_1.png",
+            "view": "/files/view/lessons/lesson1_1.webp",
+            "w": 1280,
+            "h": 726
           }
         ]
       },
@@ -21,7 +23,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson1_2.png"
+            "src": "/files/lessons/lesson1_2.png",
+            "view": "/files/view/lessons/lesson1_2.webp",
+            "w": 1280,
+            "h": 726
           }
         ]
       },
@@ -30,7 +35,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson1_3.png"
+            "src": "/files/lessons/lesson1_3.png",
+            "view": "/files/view/lessons/lesson1_3.webp",
+            "w": 1280,
+            "h": 1451
           }
         ]
       }
@@ -46,7 +54,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson2_1.jpg"
+            "src": "/files/lessons/lesson2_1.jpg",
+            "view": "/files/view/lessons/lesson2_1.webp",
+            "w": 1280,
+            "h": 567
           }
         ]
       },
@@ -55,7 +66,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson2_2.jpg"
+            "src": "/files/lessons/lesson2_2.jpg",
+            "view": "/files/view/lessons/lesson2_2.webp",
+            "w": 1280,
+            "h": 567
           }
         ]
       },
@@ -64,7 +78,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson2_3.jpg"
+            "src": "/files/lessons/lesson2_3.jpg",
+            "view": "/files/view/lessons/lesson2_3.webp",
+            "w": 1280,
+            "h": 598
           }
         ]
       }
@@ -80,7 +97,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson3_1.png"
+            "src": "/files/lessons/lesson3_1.png",
+            "view": "/files/view/lessons/lesson3_1.webp",
+            "w": 821,
+            "h": 770
           }
         ]
       },
@@ -89,7 +109,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson3_2.png"
+            "src": "/files/lessons/lesson3_2.png",
+            "view": "/files/view/lessons/lesson3_2.webp",
+            "w": 736,
+            "h": 744
           }
         ]
       },
@@ -98,11 +121,17 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson3_3.png"
+            "src": "/files/lessons/lesson3_3.png",
+            "view": "/files/view/lessons/lesson3_3.webp",
+            "w": 367,
+            "h": 678
           },
           {
             "type": "image",
-            "src": "/files/lessons/lesson3_4.png"
+            "src": "/files/lessons/lesson3_4.png",
+            "view": "/files/view/lessons/lesson3_4.webp",
+            "w": 687,
+            "h": 1280
           }
         ]
       }
@@ -118,7 +147,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson4_1.png"
+            "src": "/files/lessons/lesson4_1.png",
+            "view": "/files/view/lessons/lesson4_1.webp",
+            "w": 1007,
+            "h": 414
           }
         ]
       },
@@ -127,7 +159,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson4_2.png"
+            "src": "/files/lessons/lesson4_2.png",
+            "view": "/files/view/lessons/lesson4_2.webp",
+            "w": 1280,
+            "h": 606
           }
         ]
       },
@@ -136,7 +171,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson4_3.png"
+            "src": "/files/lessons/lesson4_3.png",
+            "view": "/files/view/lessons/lesson4_3.webp",
+            "w": 1280,
+            "h": 1125
           }
         ]
       }
@@ -152,7 +190,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson5_1.png"
+            "src": "/files/lessons/lesson5_1.png",
+            "view": "/files/view/lessons/lesson5_1.webp",
+            "w": 1280,
+            "h": 610
           }
         ]
       },
@@ -161,7 +202,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson5_2.png"
+            "src": "/files/lessons/lesson5_2.png",
+            "view": "/files/view/lessons/lesson5_2.webp",
+            "w": 1280,
+            "h": 576
           }
         ]
       },
@@ -170,7 +214,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson5_3.png"
+            "src": "/files/lessons/lesson5_3.png",
+            "view": "/files/view/lessons/lesson5_3.webp",
+            "w": 854,
+            "h": 1280
           }
         ]
       }
@@ -186,7 +233,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson6_1.png"
+            "src": "/files/lessons/lesson6_1.png",
+            "view": "/files/view/lessons/lesson6_1.webp",
+            "w": 790,
+            "h": 661
           }
         ]
       },
@@ -195,7 +245,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson6_2.png"
+            "src": "/files/lessons/lesson6_2.png",
+            "view": "/files/view/lessons/lesson6_2.webp",
+            "w": 504,
+            "h": 1280
           }
         ]
       },
@@ -204,7 +257,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson6_3.png"
+            "src": "/files/lessons/lesson6_3.png",
+            "view": "/files/view/lessons/lesson6_3.webp",
+            "w": 1280,
+            "h": 512
           }
         ]
       }
@@ -220,7 +276,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson7_1.png"
+            "src": "/files/lessons/lesson7_1.png",
+            "view": "/files/view/lessons/lesson7_1.webp",
+            "w": 1280,
+            "h": 567
           }
         ]
       },
@@ -229,7 +288,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson7_2.png"
+            "src": "/files/lessons/lesson7_2.png",
+            "view": "/files/view/lessons/lesson7_2.webp",
+            "w": 1280,
+            "h": 567
           }
         ]
       },
@@ -238,7 +300,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson7_3.png"
+            "src": "/files/lessons/lesson7_3.png",
+            "view": "/files/view/lessons/lesson7_3.webp",
+            "w": 1022,
+            "h": 384
           }
         ]
       }
@@ -254,7 +319,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson8_1.png"
+            "src": "/files/lessons/lesson8_1.png",
+            "view": "/files/view/lessons/lesson8_1.webp",
+            "w": 1280,
+            "h": 535
           }
         ]
       },
@@ -263,7 +331,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson8_2.png"
+            "src": "/files/lessons/lesson8_2.png",
+            "view": "/files/view/lessons/lesson8_2.webp",
+            "w": 1280,
+            "h": 598
           }
         ]
       },
@@ -272,7 +343,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson8_3.png"
+            "src": "/files/lessons/lesson8_3.png",
+            "view": "/files/view/lessons/lesson8_3.webp",
+            "w": 1280,
+            "h": 457
           }
         ]
       }
@@ -288,7 +362,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson9_1.png"
+            "src": "/files/lessons/lesson9_1.png",
+            "view": "/files/view/lessons/lesson9_1.webp",
+            "w": 1280,
+            "h": 526
           }
         ]
       },
@@ -297,7 +374,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson9_2.png"
+            "src": "/files/lessons/lesson9_2.png",
+            "view": "/files/view/lessons/lesson9_2.webp",
+            "w": 1280,
+            "h": 562
           }
         ]
       },
@@ -306,7 +386,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson9_3.png"
+            "src": "/files/lessons/lesson9_3.png",
+            "view": "/files/view/lessons/lesson9_3.webp",
+            "w": 744,
+            "h": 1280
           }
         ]
       }
@@ -322,7 +405,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson10_1.png"
+            "src": "/files/lessons/lesson10_1.png",
+            "view": "/files/view/lessons/lesson10_1.webp",
+            "w": 1280,
+            "h": 638
           }
         ]
       },
@@ -331,11 +417,17 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson10_2.png"
+            "src": "/files/lessons/lesson10_2.png",
+            "view": "/files/view/lessons/lesson10_2.webp",
+            "w": 1280,
+            "h": 586
           },
           {
             "type": "image",
-            "src": "/files/lessons/lesson10_2_2.png"
+            "src": "/files/lessons/lesson10_2_2.png",
+            "view": "/files/view/lessons/lesson10_2_2.webp",
+            "w": 838,
+            "h": 691
           }
         ]
       },
@@ -344,7 +436,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson10_3.png"
+            "src": "/files/lessons/lesson10_3.png",
+            "view": "/files/view/lessons/lesson10_3.webp",
+            "w": 823,
+            "h": 796
           }
         ]
       }
@@ -360,7 +455,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson11_1.png"
+            "src": "/files/lessons/lesson11_1.png",
+            "view": "/files/view/lessons/lesson11_1.webp",
+            "w": 1200,
+            "h": 673
           }
         ]
       },
@@ -369,7 +467,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson11_2.png"
+            "src": "/files/lessons/lesson11_2.png",
+            "view": "/files/view/lessons/lesson11_2.webp",
+            "w": 1280,
+            "h": 553
           }
         ]
       },
@@ -378,11 +479,17 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson11_3.png"
+            "src": "/files/lessons/lesson11_3.png",
+            "view": "/files/view/lessons/lesson11_3.webp",
+            "w": 1280,
+            "h": 720
           },
           {
             "type": "image",
-            "src": "/files/lessons/lesson11_4.png"
+            "src": "/files/lessons/lesson11_4.png",
+            "view": "/files/view/lessons/lesson11_4.webp",
+            "w": 843,
+            "h": 594
           }
         ]
       }
@@ -398,7 +505,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson12_1.png"
+            "src": "/files/lessons/lesson12_1.png",
+            "view": "/files/view/lessons/lesson12_1.webp",
+            "w": 976,
+            "h": 721
           }
         ]
       },
@@ -407,7 +517,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson12_2.png"
+            "src": "/files/lessons/lesson12_2.png",
+            "view": "/files/view/lessons/lesson12_2.webp",
+            "w": 1280,
+            "h": 614
           }
         ]
       },
@@ -416,15 +529,24 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson12_3.png"
+            "src": "/files/lessons/lesson12_3.png",
+            "view": "/files/view/lessons/lesson12_3.webp",
+            "w": 1280,
+            "h": 555
           },
           {
             "type": "image",
-            "src": "/files/lessons/lesson12_4.png"
+            "src": "/files/lessons/lesson12_4.png",
+            "view": "/files/view/lessons/lesson12_4.webp",
+            "w": 995,
+            "h": 402
           },
           {
             "type": "image",
-            "src": "/files/lessons/lesson12_5.png"
+            "src": "/files/lessons/lesson12_5.png",
+            "view": "/files/view/lessons/lesson12_5.webp",
+            "w": 1280,
+            "h": 550
           }
         ]
       }
@@ -440,7 +562,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson13_1.webp"
+            "src": "/files/lessons/lesson13_1.webp",
+            "view": "/files/view/lessons/lesson13_1.webp",
+            "w": 1280,
+            "h": 591
           }
         ]
       },
@@ -449,7 +574,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson13_2.jpg"
+            "src": "/files/lessons/lesson13_2.jpg",
+            "view": "/files/view/lessons/lesson13_2.webp",
+            "w": 1243,
+            "h": 617
           }
         ]
       },
@@ -458,7 +586,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson13_3.jpg"
+            "src": "/files/lessons/lesson13_3.jpg",
+            "view": "/files/view/lessons/lesson13_3.webp",
+            "w": 1280,
+            "h": 1183
           }
         ]
       }
@@ -474,7 +605,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson14_1.png"
+            "src": "/files/lessons/lesson14_1.png",
+            "view": "/files/view/lessons/lesson14_1.webp",
+            "w": 1280,
+            "h": 569
           }
         ]
       },
@@ -483,7 +617,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson14_2.png"
+            "src": "/files/lessons/lesson14_2.png",
+            "view": "/files/view/lessons/lesson14_2.webp",
+            "w": 1280,
+            "h": 720
           }
         ]
       },
@@ -492,11 +629,17 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson14_3.jpg"
+            "src": "/files/lessons/lesson14_3.jpg",
+            "view": "/files/view/lessons/lesson14_3.webp",
+            "w": 998,
+            "h": 668
           },
           {
             "type": "image",
-            "src": "/files/lessons/lesson14_4.jpg"
+            "src": "/files/lessons/lesson14_4.jpg",
+            "view": "/files/view/lessons/lesson14_4.webp",
+            "w": 1280,
+            "h": 720
           }
         ]
       }
@@ -512,7 +655,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson15_1.jpg"
+            "src": "/files/lessons/lesson15_1.jpg",
+            "view": "/files/view/lessons/lesson15_1.webp",
+            "w": 1280,
+            "h": 527
           }
         ]
       },
@@ -521,7 +667,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson15_2.jpg"
+            "src": "/files/lessons/lesson15_2.jpg",
+            "view": "/files/view/lessons/lesson15_2.webp",
+            "w": 1200,
+            "h": 900
           }
         ]
       },
@@ -530,7 +679,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson15_3.jpg"
+            "src": "/files/lessons/lesson15_3.jpg",
+            "view": "/files/view/lessons/lesson15_3.webp",
+            "w": 1280,
+            "h": 720
           }
         ]
       }
@@ -546,7 +698,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson16_1.webp"
+            "src": "/files/lessons/lesson16_1.webp",
+            "view": "/files/view/lessons/lesson16_1.webp",
+            "w": 1280,
+            "h": 645
           }
         ]
       },
@@ -555,7 +710,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson16_2.jpg"
+            "src": "/files/lessons/lesson16_2.jpg",
+            "view": "/files/view/lessons/lesson16_2.webp",
+            "w": 1280,
+            "h": 643
           }
         ]
       },
@@ -564,7 +722,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson16_3.webp"
+            "src": "/files/lessons/lesson16_3.webp",
+            "view": "/files/view/lessons/lesson16_3.webp",
+            "w": 1280,
+            "h": 732
           }
         ]
       }
@@ -580,7 +741,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson17_1.png"
+            "src": "/files/lessons/lesson17_1.png",
+            "view": "/files/view/lessons/lesson17_1.webp",
+            "w": 968,
+            "h": 486
           }
         ]
       },
@@ -589,7 +753,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson17_2.jpg"
+            "src": "/files/lessons/lesson17_2.jpg",
+            "view": "/files/view/lessons/lesson17_2.webp",
+            "w": 1280,
+            "h": 558
           }
         ]
       },
@@ -598,7 +765,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson17_3.png"
+            "src": "/files/lessons/lesson17_3.png",
+            "view": "/files/view/lessons/lesson17_3.webp",
+            "w": 868,
+            "h": 821
           }
         ]
       }
@@ -614,7 +784,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson18_1.jpg"
+            "src": "/files/lessons/lesson18_1.jpg",
+            "view": "/files/view/lessons/lesson18_1.webp",
+            "w": 1280,
+            "h": 695
           }
         ]
       },
@@ -623,7 +796,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson18_2.jpg"
+            "src": "/files/lessons/lesson18_2.jpg",
+            "view": "/files/view/lessons/lesson18_2.webp",
+            "w": 918,
+            "h": 917
           }
         ]
       },
@@ -632,7 +808,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson18_3.jpg"
+            "src": "/files/lessons/lesson18_3.jpg",
+            "view": "/files/view/lessons/lesson18_3.webp",
+            "w": 1100,
+            "h": 640
           }
         ]
       }
@@ -648,7 +827,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson19_1.jpg"
+            "src": "/files/lessons/lesson19_1.jpg",
+            "view": "/files/view/lessons/lesson19_1.webp",
+            "w": 1034,
+            "h": 375
           }
         ]
       },
@@ -657,7 +839,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson19_2.jpg"
+            "src": "/files/lessons/lesson19_2.jpg",
+            "view": "/files/view/lessons/lesson19_2.webp",
+            "w": 1280,
+            "h": 582
           }
         ]
       },
@@ -666,7 +851,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson19_3.png"
+            "src": "/files/lessons/lesson19_3.png",
+            "view": "/files/view/lessons/lesson19_3.webp",
+            "w": 1280,
+            "h": 540
           }
         ]
       }
@@ -682,7 +870,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson20_1.png"
+            "src": "/files/lessons/lesson20_1.png",
+            "view": "/files/view/lessons/lesson20_1.webp",
+            "w": 802,
+            "h": 601
           }
         ]
       },
@@ -691,7 +882,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson20_2.png"
+            "src": "/files/lessons/lesson20_2.png",
+            "view": "/files/view/lessons/lesson20_2.webp",
+            "w": 1280,
+            "h": 953
           }
         ]
       },
@@ -700,11 +894,17 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson20_3.jpg"
+            "src": "/files/lessons/lesson20_3.jpg",
+            "view": "/files/view/lessons/lesson20_3.webp",
+            "w": 948,
+            "h": 731
           },
           {
             "type": "image",
-            "src": "/files/lessons/lesson20_4.jpg"
+            "src": "/files/lessons/lesson20_4.jpg",
+            "view": "/files/view/lessons/lesson20_4.webp",
+            "w": 803,
+            "h": 643
           }
         ]
       }
@@ -720,7 +920,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson21_2.webp"
+            "src": "/files/lessons/lesson21_2.webp",
+            "view": "/files/view/lessons/lesson21_2.webp",
+            "w": 1280,
+            "h": 752
           }
         ]
       },
@@ -729,7 +932,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson21_3.jpg"
+            "src": "/files/lessons/lesson21_3.jpg",
+            "view": "/files/view/lessons/lesson21_3.webp",
+            "w": 1280,
+            "h": 639
           }
         ]
       }
@@ -745,7 +951,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson22_1.png"
+            "src": "/files/lessons/lesson22_1.png",
+            "view": "/files/view/lessons/lesson22_1.webp",
+            "w": 435,
+            "h": 222
           }
         ]
       },
@@ -754,7 +963,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson22_2.jpg"
+            "src": "/files/lessons/lesson22_2.jpg",
+            "view": "/files/view/lessons/lesson22_2.webp",
+            "w": 1280,
+            "h": 555
           }
         ]
       },
@@ -763,7 +975,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson22_3.jpg"
+            "src": "/files/lessons/lesson22_3.jpg",
+            "view": "/files/view/lessons/lesson22_3.webp",
+            "w": 1228,
+            "h": 552
           }
         ]
       }
@@ -779,7 +994,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson23_1.jpg"
+            "src": "/files/lessons/lesson23_1.jpg",
+            "view": "/files/view/lessons/lesson23_1.webp",
+            "w": 519,
+            "h": 833
           }
         ]
       },
@@ -788,7 +1006,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson23_2.png"
+            "src": "/files/lessons/lesson23_2.png",
+            "view": "/files/view/lessons/lesson23_2.webp",
+            "w": 962,
+            "h": 647
           }
         ]
       },
@@ -797,7 +1018,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson23_3.webp"
+            "src": "/files/lessons/lesson23_3.webp",
+            "view": "/files/view/lessons/lesson23_3.webp",
+            "w": 1280,
+            "h": 960
           }
         ]
       }
@@ -813,7 +1037,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson24_1.png"
+            "src": "/files/lessons/lesson24_1.png",
+            "view": "/files/view/lessons/lesson24_1.webp",
+            "w": 1034,
+            "h": 455
           }
         ]
       },
@@ -822,7 +1049,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson24_2.jpg"
+            "src": "/files/lessons/lesson24_2.jpg",
+            "view": "/files/view/lessons/lesson24_2.webp",
+            "w": 1280,
+            "h": 853
           }
         ]
       },
@@ -831,7 +1061,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson24_3.webp"
+            "src": "/files/lessons/lesson24_3.webp",
+            "view": "/files/view/lessons/lesson24_3.webp",
+            "w": 1267,
+            "h": 894
           }
         ]
       }
@@ -847,7 +1080,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson25_1.jpg"
+            "src": "/files/lessons/lesson25_1.jpg",
+            "view": "/files/view/lessons/lesson25_1.webp",
+            "w": 904,
+            "h": 766
           }
         ]
       },
@@ -856,7 +1092,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson25_2.png"
+            "src": "/files/lessons/lesson25_2.png",
+            "view": "/files/view/lessons/lesson25_2.webp",
+            "w": 1155,
+            "h": 533
           }
         ]
       },
@@ -865,7 +1104,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson25_3.webp"
+            "src": "/files/lessons/lesson25_3.webp",
+            "view": "/files/view/lessons/lesson25_3.webp",
+            "w": 1280,
+            "h": 742
           }
         ]
       }
@@ -881,7 +1123,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson26_1.png"
+            "src": "/files/lessons/lesson26_1.png",
+            "view": "/files/view/lessons/lesson26_1.webp",
+            "w": 1280,
+            "h": 498
           }
         ]
       },
@@ -890,7 +1135,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson26_2.png"
+            "src": "/files/lessons/lesson26_2.png",
+            "view": "/files/view/lessons/lesson26_2.webp",
+            "w": 1166,
+            "h": 780
           }
         ]
       },
@@ -899,7 +1147,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson26_3.webp"
+            "src": "/files/lessons/lesson26_3.webp",
+            "view": "/files/view/lessons/lesson26_3.webp",
+            "w": 1280,
+            "h": 888
           }
         ]
       }
@@ -915,7 +1166,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson27_1.png"
+            "src": "/files/lessons/lesson27_1.png",
+            "view": "/files/view/lessons/lesson27_1.webp",
+            "w": 1280,
+            "h": 511
           }
         ]
       },
@@ -924,7 +1178,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson27_2.png"
+            "src": "/files/lessons/lesson27_2.png",
+            "view": "/files/view/lessons/lesson27_2.webp",
+            "w": 1100,
+            "h": 825
           }
         ]
       },
@@ -933,7 +1190,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson27_3.jpg"
+            "src": "/files/lessons/lesson27_3.jpg",
+            "view": "/files/view/lessons/lesson27_3.webp",
+            "w": 1280,
+            "h": 758
           }
         ]
       }
@@ -949,7 +1209,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson28_1.png"
+            "src": "/files/lessons/lesson28_1.png",
+            "view": "/files/view/lessons/lesson28_1.webp",
+            "w": 473,
+            "h": 727
           }
         ]
       },
@@ -958,7 +1221,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson28_2.png"
+            "src": "/files/lessons/lesson28_2.png",
+            "view": "/files/view/lessons/lesson28_2.webp",
+            "w": 513,
+            "h": 699
           }
         ]
       },
@@ -967,7 +1233,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson28_3.webp"
+            "src": "/files/lessons/lesson28_3.webp",
+            "view": "/files/view/lessons/lesson28_3.webp",
+            "w": 1280,
+            "h": 3595
           }
         ]
       }
@@ -1017,7 +1286,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson30_1.jpg"
+            "src": "/files/lessons/lesson30_1.jpg",
+            "view": "/files/view/lessons/lesson30_1.webp",
+            "w": 1165,
+            "h": 498
           }
         ]
       },
@@ -1026,7 +1298,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson14_4.jpg"
+            "src": "/files/lessons/lesson14_4.jpg",
+            "view": "/files/view/lessons/lesson14_4.webp",
+            "w": 1280,
+            "h": 720
           }
         ]
       },
@@ -1035,7 +1310,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson30_2.png"
+            "src": "/files/lessons/lesson30_2.png",
+            "view": "/files/view/lessons/lesson30_2.webp",
+            "w": 1280,
+            "h": 853
           }
         ]
       }
@@ -1051,7 +1329,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson31_1.png"
+            "src": "/files/lessons/lesson31_1.png",
+            "view": "/files/view/lessons/lesson31_1.webp",
+            "w": 537,
+            "h": 418
           }
         ]
       },
@@ -1060,7 +1341,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson31_2.png"
+            "src": "/files/lessons/lesson31_2.png",
+            "view": "/files/view/lessons/lesson31_2.webp",
+            "w": 543,
+            "h": 423
           }
         ]
       },
@@ -1069,7 +1353,10 @@ export const lessons = [
         "items": [
           {
             "type": "video",
-            "src": "/files/lessons/lesson31_3.mp4"
+            "src": "/files/lessons/lesson31_3.mp4",
+            "poster": "/files/view/lessons/lesson31_3.jpg",
+            "w": 1236,
+            "h": 838
           }
         ]
       }
@@ -1094,7 +1381,10 @@ export const lessons = [
         "items": [
           {
             "type": "video",
-            "src": "/files/lessons/lesson32_3.mp4"
+            "src": "/files/lessons/lesson32_3.mp4",
+            "poster": "/files/view/lessons/lesson32_3.jpg",
+            "w": 1280,
+            "h": 720
           }
         ]
       }
@@ -1110,7 +1400,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson33_1.png"
+            "src": "/files/lessons/lesson33_1.png",
+            "view": "/files/view/lessons/lesson33_1.webp",
+            "w": 1280,
+            "h": 542
           }
         ]
       },
@@ -1119,7 +1412,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson33_2.webp"
+            "src": "/files/lessons/lesson33_2.webp",
+            "view": "/files/view/lessons/lesson33_2.webp",
+            "w": 1180,
+            "h": 775
           }
         ]
       },
@@ -1128,7 +1424,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson33_3.webp"
+            "src": "/files/lessons/lesson33_3.webp",
+            "view": "/files/view/lessons/lesson33_3.webp",
+            "w": 1280,
+            "h": 652
           }
         ]
       }
@@ -1144,7 +1443,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson34_1.png"
+            "src": "/files/lessons/lesson34_1.png",
+            "view": "/files/view/lessons/lesson34_1.webp",
+            "w": 1280,
+            "h": 253
           }
         ]
       },
@@ -1153,7 +1455,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson34_2.png"
+            "src": "/files/lessons/lesson34_2.png",
+            "view": "/files/view/lessons/lesson34_2.webp",
+            "w": 1280,
+            "h": 248
           }
         ]
       },
@@ -1162,7 +1467,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson24_2.jpg"
+            "src": "/files/lessons/lesson24_2.jpg",
+            "view": "/files/view/lessons/lesson24_2.webp",
+            "w": 1280,
+            "h": 853
           }
         ]
       }
@@ -1178,7 +1486,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson35_1.jpg"
+            "src": "/files/lessons/lesson35_1.jpg",
+            "view": "/files/view/lessons/lesson35_1.webp",
+            "w": 1280,
+            "h": 522
           }
         ]
       },
@@ -1187,7 +1498,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson35_2.webp"
+            "src": "/files/lessons/lesson35_2.webp",
+            "view": "/files/view/lessons/lesson35_2.webp",
+            "w": 1280,
+            "h": 800
           }
         ]
       },
@@ -1196,7 +1510,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson24_3.webp"
+            "src": "/files/lessons/lesson24_3.webp",
+            "view": "/files/view/lessons/lesson24_3.webp",
+            "w": 1267,
+            "h": 894
           }
         ]
       }
@@ -1212,7 +1529,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson36_1.jpg"
+            "src": "/files/lessons/lesson36_1.jpg",
+            "view": "/files/view/lessons/lesson36_1.webp",
+            "w": 1280,
+            "h": 880
           }
         ]
       },
@@ -1221,7 +1541,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson36_2.png"
+            "src": "/files/lessons/lesson36_2.png",
+            "view": "/files/view/lessons/lesson36_2.webp",
+            "w": 1280,
+            "h": 638
           }
         ]
       },
@@ -1230,7 +1553,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson36_3.webp"
+            "src": "/files/lessons/lesson36_3.webp",
+            "view": "/files/view/lessons/lesson36_3.webp",
+            "w": 1178,
+            "h": 978
           }
         ]
       }
@@ -1246,7 +1572,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson37_1.webp"
+            "src": "/files/lessons/lesson37_1.webp",
+            "view": "/files/view/lessons/lesson37_1.webp",
+            "w": 1280,
+            "h": 640
           }
         ]
       },
@@ -1255,7 +1584,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson37_2.png"
+            "src": "/files/lessons/lesson37_2.png",
+            "view": "/files/view/lessons/lesson37_2.webp",
+            "w": 822,
+            "h": 635
           }
         ]
       },
@@ -1264,7 +1596,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson37_3.webp"
+            "src": "/files/lessons/lesson37_3.webp",
+            "view": "/files/view/lessons/lesson37_3.webp",
+            "w": 1200,
+            "h": 900
           }
         ]
       }
@@ -1280,7 +1615,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson38_1.png"
+            "src": "/files/lessons/lesson38_1.png",
+            "view": "/files/view/lessons/lesson38_1.webp",
+            "w": 1209,
+            "h": 562
           }
         ]
       },
@@ -1289,7 +1627,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson38_2.jpg"
+            "src": "/files/lessons/lesson38_2.jpg",
+            "view": "/files/view/lessons/lesson38_2.webp",
+            "w": 1280,
+            "h": 901
           }
         ]
       },
@@ -1298,7 +1639,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson38_3.webp"
+            "src": "/files/lessons/lesson38_3.webp",
+            "view": "/files/view/lessons/lesson38_3.webp",
+            "w": 1280,
+            "h": 1866
           }
         ]
       }
@@ -1314,7 +1658,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson39_1.jpg"
+            "src": "/files/lessons/lesson39_1.jpg",
+            "view": "/files/view/lessons/lesson39_1.webp",
+            "w": 1081,
+            "h": 506
           }
         ]
       },
@@ -1323,7 +1670,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson39_2.png"
+            "src": "/files/lessons/lesson39_2.png",
+            "view": "/files/view/lessons/lesson39_2.webp",
+            "w": 1280,
+            "h": 527
           }
         ]
       },
@@ -1332,7 +1682,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson39_3.jpg"
+            "src": "/files/lessons/lesson39_3.jpg",
+            "view": "/files/view/lessons/lesson39_3.webp",
+            "w": 1200,
+            "h": 627
           }
         ]
       }
@@ -1348,7 +1701,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson40_1.jpg"
+            "src": "/files/lessons/lesson40_1.jpg",
+            "view": "/files/view/lessons/lesson40_1.webp",
+            "w": 1280,
+            "h": 544
           }
         ]
       },
@@ -1357,7 +1713,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson40_2.jpg"
+            "src": "/files/lessons/lesson40_2.jpg",
+            "view": "/files/view/lessons/lesson40_2.webp",
+            "w": 1280,
+            "h": 921
           }
         ]
       },
@@ -1366,7 +1725,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson40_3.jpg"
+            "src": "/files/lessons/lesson40_3.jpg",
+            "view": "/files/view/lessons/lesson40_3.webp",
+            "w": 1280,
+            "h": 1280
           }
         ]
       }
@@ -1382,7 +1744,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson41_1.jpg"
+            "src": "/files/lessons/lesson41_1.jpg",
+            "view": "/files/view/lessons/lesson41_1.webp",
+            "w": 1148,
+            "h": 451
           }
         ]
       },
@@ -1391,7 +1756,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson41_2.jpg"
+            "src": "/files/lessons/lesson41_2.jpg",
+            "view": "/files/view/lessons/lesson41_2.webp",
+            "w": 1280,
+            "h": 853
           }
         ]
       },
@@ -1400,7 +1768,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson24_3.webp"
+            "src": "/files/lessons/lesson24_3.webp",
+            "view": "/files/view/lessons/lesson24_3.webp",
+            "w": 1267,
+            "h": 894
           }
         ]
       }
@@ -1416,7 +1787,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson42_1.png"
+            "src": "/files/lessons/lesson42_1.png",
+            "view": "/files/view/lessons/lesson42_1.webp",
+            "w": 1280,
+            "h": 501
           }
         ]
       },
@@ -1425,7 +1799,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson42_2.png"
+            "src": "/files/lessons/lesson42_2.png",
+            "view": "/files/view/lessons/lesson42_2.webp",
+            "w": 1280,
+            "h": 457
           }
         ]
       },
@@ -1434,7 +1811,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson42_3.png"
+            "src": "/files/lessons/lesson42_3.png",
+            "view": "/files/view/lessons/lesson42_3.webp",
+            "w": 1174,
+            "h": 940
           }
         ]
       }
@@ -1450,7 +1830,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson43_1.png"
+            "src": "/files/lessons/lesson43_1.png",
+            "view": "/files/view/lessons/lesson43_1.webp",
+            "w": 1280,
+            "h": 482
           }
         ]
       },
@@ -1459,7 +1842,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson43_2.webp"
+            "src": "/files/lessons/lesson43_2.webp",
+            "view": "/files/view/lessons/lesson43_2.webp",
+            "w": 1280,
+            "h": 853
           }
         ]
       },
@@ -1468,7 +1854,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson43_3.png"
+            "src": "/files/lessons/lesson43_3.png",
+            "view": "/files/view/lessons/lesson43_3.webp",
+            "w": 738,
+            "h": 563
           }
         ]
       }
@@ -1484,7 +1873,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson44_1.webp"
+            "src": "/files/lessons/lesson44_1.webp",
+            "view": "/files/view/lessons/lesson44_1.webp",
+            "w": 1280,
+            "h": 551
           }
         ]
       },
@@ -1493,7 +1885,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson44_2.webp"
+            "src": "/files/lessons/lesson44_2.webp",
+            "view": "/files/view/lessons/lesson44_2.webp",
+            "w": 1177,
+            "h": 948
           }
         ]
       },
@@ -1502,7 +1897,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson44_3.png"
+            "src": "/files/lessons/lesson44_3.png",
+            "view": "/files/view/lessons/lesson44_3.webp",
+            "w": 610,
+            "h": 1059
           }
         ]
       }
@@ -1518,7 +1916,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson45_1.webp"
+            "src": "/files/lessons/lesson45_1.webp",
+            "view": "/files/view/lessons/lesson45_1.webp",
+            "w": 1176,
+            "h": 1050
           }
         ]
       },
@@ -1527,7 +1928,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson45_2.png"
+            "src": "/files/lessons/lesson45_2.png",
+            "view": "/files/view/lessons/lesson45_2.webp",
+            "w": 475,
+            "h": 686
           }
         ]
       },
@@ -1536,7 +1940,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson45_3.webp"
+            "src": "/files/lessons/lesson45_3.webp",
+            "view": "/files/view/lessons/lesson45_3.webp",
+            "w": 1280,
+            "h": 2143
           }
         ]
       }
@@ -1552,7 +1959,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson46_1.png"
+            "src": "/files/lessons/lesson46_1.png",
+            "view": "/files/view/lessons/lesson46_1.webp",
+            "w": 814,
+            "h": 627
           }
         ]
       },
@@ -1561,7 +1971,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson46_2.png"
+            "src": "/files/lessons/lesson46_2.png",
+            "view": "/files/view/lessons/lesson46_2.webp",
+            "w": 600,
+            "h": 450
           }
         ]
       },
@@ -1570,7 +1983,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson46_3.png"
+            "src": "/files/lessons/lesson46_3.png",
+            "view": "/files/view/lessons/lesson46_3.webp",
+            "w": 990,
+            "h": 409
           }
         ]
       }
@@ -1586,7 +2002,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson47_1.png"
+            "src": "/files/lessons/lesson47_1.png",
+            "view": "/files/view/lessons/lesson47_1.webp",
+            "w": 1280,
+            "h": 622
           }
         ]
       },
@@ -1595,7 +2014,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson47_2.png"
+            "src": "/files/lessons/lesson47_2.png",
+            "view": "/files/view/lessons/lesson47_2.webp",
+            "w": 1280,
+            "h": 720
           }
         ]
       },
@@ -1604,7 +2026,10 @@ export const lessons = [
         "items": [
           {
             "type": "image",
-            "src": "/files/lessons/lesson47_3.webp"
+            "src": "/files/lessons/lesson47_3.webp",
+            "view": "/files/view/lessons/lesson47_3.webp",
+            "w": 1280,
+            "h": 796
           }
         ]
       }
@@ -1648,24 +2073,84 @@ export const lessons = [
 
 export const resources = {
   "images": [
-    "/files/resources/rasm1.jpg",
-    "/files/resources/rasm2.png",
-    "/files/resources/rasm3.png",
-    "/files/resources/rasm4.jpg",
-    "/files/resources/rasm5.jpg",
-    "/files/resources/rasm6.webp",
-    "/files/resources/rasm7.webp",
-    "/files/resources/rasm8.jpg",
-    "/files/resources/rasm9.webp",
-    "/files/resources/rasm10.jpg",
-    "/files/resources/rasm11.webp",
-    "/files/resources/rasm12.webp"
+    {
+      "src": "/files/resources/rasm1.jpg",
+      "thumb": "/files/thumb/resources/rasm1.webp",
+      "view": "/files/view/resources/rasm1.webp"
+    },
+    {
+      "src": "/files/resources/rasm2.png",
+      "thumb": "/files/thumb/resources/rasm2.webp",
+      "view": "/files/view/resources/rasm2.webp"
+    },
+    {
+      "src": "/files/resources/rasm3.png",
+      "thumb": "/files/thumb/resources/rasm3.webp",
+      "view": "/files/view/resources/rasm3.webp"
+    },
+    {
+      "src": "/files/resources/rasm4.jpg",
+      "thumb": "/files/thumb/resources/rasm4.webp",
+      "view": "/files/view/resources/rasm4.webp"
+    },
+    {
+      "src": "/files/resources/rasm5.jpg",
+      "thumb": "/files/thumb/resources/rasm5.webp",
+      "view": "/files/view/resources/rasm5.webp"
+    },
+    {
+      "src": "/files/resources/rasm6.webp",
+      "thumb": "/files/thumb/resources/rasm6.webp",
+      "view": "/files/view/resources/rasm6.webp"
+    },
+    {
+      "src": "/files/resources/rasm7.webp",
+      "thumb": "/files/thumb/resources/rasm7.webp",
+      "view": "/files/view/resources/rasm7.webp"
+    },
+    {
+      "src": "/files/resources/rasm8.jpg",
+      "thumb": "/files/thumb/resources/rasm8.webp",
+      "view": "/files/view/resources/rasm8.webp"
+    },
+    {
+      "src": "/files/resources/rasm9.webp",
+      "thumb": "/files/thumb/resources/rasm9.webp",
+      "view": "/files/view/resources/rasm9.webp"
+    },
+    {
+      "src": "/files/resources/rasm10.jpg",
+      "thumb": "/files/thumb/resources/rasm10.webp",
+      "view": "/files/view/resources/rasm10.webp"
+    },
+    {
+      "src": "/files/resources/rasm11.webp",
+      "thumb": "/files/thumb/resources/rasm11.webp",
+      "view": "/files/view/resources/rasm11.webp"
+    },
+    {
+      "src": "/files/resources/rasm12.webp",
+      "thumb": "/files/thumb/resources/rasm12.webp",
+      "view": "/files/view/resources/rasm12.webp"
+    }
   ],
   "videos": [
-    "/files/resources/video1.mp4",
-    "/files/resources/video2.mp4",
-    "/files/resources/video3.mp4",
-    "/files/resources/video4.mp4"
+    {
+      "src": "/files/resources/video1.mp4",
+      "poster": "/files/view/resources/video1.jpg"
+    },
+    {
+      "src": "/files/resources/video2.mp4",
+      "poster": "/files/view/resources/video2.jpg"
+    },
+    {
+      "src": "/files/resources/video3.mp4",
+      "poster": "/files/view/resources/video3.jpg"
+    },
+    {
+      "src": "/files/resources/video4.mp4",
+      "poster": "/files/view/resources/video4.jpg"
+    }
   ],
   "musics": [
     "/files/resources/musiqa1.mp3",

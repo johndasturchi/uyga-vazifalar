@@ -2,6 +2,10 @@
 
 Frontend kursining 48 ta darsi bo'yicha uyga vazifalar sayti (React + Vite + TailwindCSS).
 
+## Rasmlarni optimallashtirish
+
+Saytda rasmlarning yengil `public/files/view/` nusxalari ko'rsatiladi, "Yuklab olish" esa asl faylni beradi. Yangi rasm qo'shsangiz, uning yengil nusxasini ham `view` papkasiga WebP (kengligi 1280px) qilib qo'ying va `lessons.js` da `view`, `w`, `h` maydonlarini to'ldiring.
+
 ## Ishga tushirish (kompyuterda)
 
 ```bash

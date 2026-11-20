@@ -31,7 +31,7 @@ export default function Resources() {
   const items = resources[tab.key];
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-5xl px-4 py-8 sm:px-8 sm:py-12">
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Resurslar</h1>
       <p className="mt-2 text-slate-500">Topshiriqlarda ishlatish uchun rasm, video va musiqalar.</p>
 
@@ -56,20 +56,23 @@ export default function Resources() {
       </div>
 
       {tab.key === "images" && (
-        <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
-          {items.map((src, i) => (
-            <div key={src} className="overflow-hidden rounded-xl border border-slate-200">
-              <button onClick={() => setZoom(src)} className="block aspect-[4/3] w-full overflow-hidden bg-slate-50">
+        <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 xl:grid-cols-4">
+          {items.map((img, i) => (
+            <div key={img.src} className="overflow-hidden rounded-xl border border-slate-200">
+              <button onClick={() => setZoom(img.src)} className="block aspect-[4/3] w-full overflow-hidden bg-slate-100">
                 <img
-                  src={src}
+                  src={img.thumb}
                   alt={`Rasm ${i + 1}`}
+                  width="480"
+                  height="360"
                   loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover transition duration-300 hover:scale-105"
                 />
               </button>
               <div className="flex flex-col items-start gap-2 p-3 sm:flex-row sm:items-center sm:justify-between">
                 <span className="text-sm font-medium">Rasm {i + 1}</span>
-                <DownloadBtn src={src} />
+                <DownloadBtn src={img.src} />
               </div>
             </div>
           ))}
@@ -78,12 +81,12 @@ export default function Resources() {
 
       {tab.key === "videos" && (
         <div className="mt-6 grid gap-4 md:grid-cols-2">
-          {items.map((src, i) => (
-            <div key={src} className="overflow-hidden rounded-xl border border-slate-200">
-              <video controls preload="metadata" src={src} className="aspect-video w-full bg-black" />
+          {items.map((v, i) => (
+            <div key={v.src} className="overflow-hidden rounded-xl border border-slate-200">
+              <video controls preload="none" poster={v.poster} src={v.src} className="aspect-video w-full bg-black" />
               <div className="flex items-center justify-between p-3">
                 <span className="text-sm font-medium">Video {i + 1}</span>
-                <DownloadBtn src={src} />
+                <DownloadBtn src={v.src} />
               </div>
             </div>
           ))}
