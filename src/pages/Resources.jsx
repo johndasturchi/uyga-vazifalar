@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Download, Image as ImageIcon, Film, Music } from "lucide-react";
-import { resources } from "../data/lessons.js";
-import { fileName } from "../lib/meta.js";
+import { fileName, downloadUrl } from "../lib/meta.js";
+import WithData from "../components/Loading.jsx";
 import Lightbox from "../components/Lightbox.jsx";
 
 const TABS = [
@@ -14,7 +14,7 @@ const TABS = [
 function DownloadBtn({ src }) {
   return (
     <a
-      href={src}
+      href={downloadUrl(src)}
       download={fileName(src)}
       className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
     >
@@ -25,6 +25,10 @@ function DownloadBtn({ src }) {
 }
 
 export default function Resources() {
+  return <WithData>{(data) => <ResourcesView resources={data.resources} />}</WithData>;
+}
+
+function ResourcesView({ resources }) {
   const [params, setParams] = useSearchParams();
   const tab = TABS.find((t) => t.id === params.get("tur")) || TABS[0];
   const [zoom, setZoom] = useState(null);
@@ -71,7 +75,7 @@ export default function Resources() {
                 />
               </button>
               <div className="flex flex-col items-start gap-2 p-3 sm:flex-row sm:items-center sm:justify-between">
-                <span className="text-sm font-medium">Rasm {i + 1}</span>
+                <span className="truncate text-sm font-medium">{img.title || `Rasm ${i + 1}`}</span>
                 <DownloadBtn src={img.src} />
               </div>
             </div>
@@ -85,7 +89,7 @@ export default function Resources() {
             <div key={v.src} className="overflow-hidden rounded-xl border border-slate-200">
               <video controls preload="none" poster={v.poster} src={v.src} className="aspect-video w-full bg-black" />
               <div className="flex items-center justify-between p-3">
-                <span className="text-sm font-medium">Video {i + 1}</span>
+                <span className="truncate text-sm font-medium">{v.title || `Video ${i + 1}`}</span>
                 <DownloadBtn src={v.src} />
               </div>
             </div>
@@ -95,18 +99,18 @@ export default function Resources() {
 
       {tab.key === "musics" && (
         <div className="mt-6 grid gap-4 md:grid-cols-2">
-          {items.map((src, i) => (
-            <div key={src} className="rounded-xl border border-slate-200 p-4">
+          {items.map((m, i) => (
+            <div key={m.src} className="rounded-xl border border-slate-200 p-4">
               <div className="mb-3 flex items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
                   <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
                     <Music className="h-5 w-5" />
                   </span>
-                  <span className="font-medium">Musiqa {i + 1}</span>
+                  <span className="truncate font-medium">{m.title || `Musiqa ${i + 1}`}</span>
                 </div>
-                <DownloadBtn src={src} />
+                <DownloadBtn src={m.src} />
               </div>
-              <audio controls preload="none" src={src} className="w-full" />
+              <audio controls preload="none" src={m.src} className="w-full" />
             </div>
           ))}
         </div>

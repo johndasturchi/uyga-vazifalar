@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Download, ExternalLink, Maximize2 } from "lucide-react";
-import { lessons } from "../data/lessons.js";
-import { LEVELS, MONTHS, fileName, prefetchLesson } from "../lib/meta.js";
+import { LEVELS, fileName, downloadUrl, prefetchLesson } from "../lib/meta.js";
+import WithData from "../components/Loading.jsx";
 import Lightbox from "../components/Lightbox.jsx";
 import NotFound from "./NotFound.jsx";
 
@@ -16,11 +16,11 @@ function LazyImage({ item, eager, onZoom }) {
     <button
       onClick={() => onZoom(item.src)}
       className="group relative block w-full overflow-hidden rounded-xl border border-slate-200 bg-slate-50"
-      style={{ aspectRatio: `${item.w} / ${item.h}` }}
+      style={item.w && item.h ? { aspectRatio: `${item.w} / ${item.h}` } : { minHeight: 200 }}
     >
       {!loaded && <span className="absolute inset-0 animate-pulse bg-slate-100" />}
       <img
-        src={item.view}
+        src={item.view || item.src}
         alt=""
         width={item.w}
         height={item.h}
@@ -71,7 +71,7 @@ function TaskItem({ item, eager, onZoom }) {
         />
       )}
       <a
-        href={item.src}
+        href={downloadUrl(item.src)}
         download={fileName(item.src)}
         className="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
       >
@@ -83,6 +83,10 @@ function TaskItem({ item, eager, onZoom }) {
 }
 
 export default function Lesson() {
+  return <WithData>{(data) => <LessonView lessons={data.lessons} months={data.months} />}</WithData>;
+}
+
+function LessonView({ lessons, months: MONTHS }) {
   const { id } = useParams();
   const index = lessons.findIndex((l) => String(l.id) === id);
   const [zoom, setZoom] = useState(null);

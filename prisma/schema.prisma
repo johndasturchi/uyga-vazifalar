@@ -1,0 +1,80 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_URL_UNPOOLED")
+}
+
+model Month {
+  id        Int      @id @default(autoincrement())
+  order     Int
+  name      String
+  desc      String   @default("")
+  lessons   Lesson[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Lesson {
+  id        Int      @id @default(autoincrement())
+  number    Int      @unique
+  title     String
+  monthId   Int
+  month     Month    @relation(fields: [monthId], references: [id], onDelete: Restrict)
+  items     Item[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([monthId])
+}
+
+enum Level {
+  sodda
+  orta
+  murakkab
+}
+
+enum ItemType {
+  image
+  video
+  link
+}
+
+model Item {
+  id       Int      @id @default(autoincrement())
+  lessonId Int
+  lesson   Lesson   @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  level    Level
+  order    Int      @default(0)
+  type     ItemType
+  src      String?
+  view     String?
+  poster   String?
+  url      String?
+  w        Int?
+  h        Int?
+
+  @@index([lessonId])
+}
+
+enum ResourceKind {
+  image
+  video
+  music
+}
+
+model Resource {
+  id        Int          @id @default(autoincrement())
+  kind      ResourceKind
+  title     String       @default("")
+  order     Int          @default(0)
+  src       String
+  view      String?
+  thumb     String?
+  poster    String?
+  createdAt DateTime     @default(now())
+}

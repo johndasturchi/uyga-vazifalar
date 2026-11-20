@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { lessons } from "../data/lessons.js";
-import { LEVELS, MONTHS, prefetchLesson } from "../lib/meta.js";
+import { LEVELS, prefetchLesson } from "../lib/meta.js";
+import WithData from "../components/Loading.jsx";
 
 export default function Home() {
+  return <WithData>{(data) => <HomeView lessons={data.lessons} months={data.months} />}</WithData>;
+}
+
+function HomeView({ lessons, months: MONTHS }) {
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 sm:px-8 sm:py-12">
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Uyga vazifalar</h1>
@@ -24,6 +28,7 @@ export default function Home() {
         {MONTHS.map((m) => {
           const list = lessons.filter((l) => l.month === m.id);
           const first = list[0];
+          if (!first) return null;
           return (
             <div key={m.id} className="flex flex-col rounded-2xl border border-slate-200 p-5">
               <div className="flex items-baseline justify-between">

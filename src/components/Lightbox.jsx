@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { X, Download } from "lucide-react";
-import { fileName } from "../lib/meta.js";
+import { fileName, downloadUrl } from "../lib/meta.js";
 
 export default function Lightbox({ src, onClose }) {
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function Lightbox({ src, onClose }) {
     >
       <div className="flex items-center justify-end gap-2 p-3 sm:p-4" onClick={(e) => e.stopPropagation()}>
         <a
-          href={src}
+          href={downloadUrl(src)}
           download={fileName(src)}
           className="inline-flex items-center gap-2 rounded-lg bg-white/10 px-3 py-2 text-sm font-medium text-white hover:bg-white/20"
         >

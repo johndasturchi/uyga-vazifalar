@@ -1,10 +1,3 @@
-export const MONTHS = [
-  { id: 1, name: "1-oy", desc: "HTML va CSS asoslari" },
-  { id: 2, name: "2-oy", desc: "Joylashuv va effektlar" },
-  { id: 3, name: "3-oy", desc: "Dizayn vositalari va FlexBox" },
-  { id: 4, name: "4-oy", desc: "SASS, Responsive, Bootstrap" },
-];
-
 export const LEVELS = {
   sodda: {
     name: "Sodda topshiriq",
@@ -29,8 +22,15 @@ export const LEVELS = {
   },
 };
 
+export const LEVEL_KEYS = ["sodda", "orta", "murakkab"];
+
 export function fileName(src) {
-  return src.split("/").pop();
+  return decodeURIComponent(src.split("?")[0].split("/").pop());
+}
+
+// Vercel Blob fayllari boshqa domenda turadi, shuning uchun majburiy yuklab olish uchun ?download=1 qo'shiladi
+export function downloadUrl(src) {
+  return src.includes(".blob.vercel-storage.com") ? `${src}${src.includes("?") ? "&" : "?"}download=1` : src;
 }
 
 // Keyingi darsning rasmlarini oldindan (fonda) yuklab qo'yish
@@ -39,7 +39,7 @@ export function prefetchLesson(lesson) {
   if (!lesson) return;
   lesson.tasks.forEach((t) =>
     t.items.forEach((it) => {
-      const url = it.view || it.poster;
+      const url = it.type === "image" ? it.view || it.src : it.poster;
       if (!url || prefetched.has(url)) return;
       prefetched.add(url);
       const img = new Image();

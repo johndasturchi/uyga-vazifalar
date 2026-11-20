@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { ChevronDown, FolderOpen, Home, Search, X } from "lucide-react";
-import { lessons } from "../data/lessons.js";
-import { MONTHS, prefetchLesson } from "../lib/meta.js";
+import { prefetchLesson } from "../lib/meta.js";
+import { useData } from "../lib/data.jsx";
+
+const EMPTY = { lessons: [], months: [] };
 
 function currentLessonId(pathname) {
   const m = pathname.match(/^\/dars\/(\d+)/);
@@ -11,15 +13,22 @@ function currentLessonId(pathname) {
 
 export default function Sidebar({ onNavigate }) {
   const { pathname } = useLocation();
+  const { data } = useData();
+  const { lessons, months: MONTHS } = data || EMPTY;
   const activeId = currentLessonId(pathname);
   const activeMonth = lessons.find((l) => l.id === activeId)?.month;
 
   const [q, setQ] = useState("");
   const [month, setMonth] = useState(0);
-  const [open, setOpen] = useState(() => new Set([activeMonth || 1]));
+  const [open, setOpen] = useState(() => new Set(activeMonth ? [activeMonth] : []));
   const activeRef = useRef(null);
 
   // Faol dars oyini ochib qo'yish
+  // Hech narsa ochiq bo'lmasa, birinchi oyni ochish
+  useEffect(() => {
+    if (!activeMonth && MONTHS.length) setOpen((prev) => (prev.size ? prev : new Set([MONTHS[0].id])));
+  }, [MONTHS, activeMonth]);
+
   useEffect(() => {
     if (activeMonth) setOpen((prev) => (prev.has(activeMonth) ? prev : new Set(prev).add(activeMonth)));
   }, [activeMonth]);
@@ -44,7 +53,7 @@ export default function Sidebar({ onNavigate }) {
           ),
         }))
         .filter((g) => g.items.length),
-    [text, month]
+    [text, month, lessons, MONTHS]
   );
 
   const toggle = (id) =>
@@ -82,12 +91,12 @@ export default function Sidebar({ onNavigate }) {
           )}
         </div>
 
-        <div className="mt-3 grid grid-cols-[auto_repeat(4,minmax(0,1fr))] gap-1 rounded-lg bg-slate-100 p-1">
+        <div className="scrollbar-thin mt-3 flex gap-1 overflow-x-auto rounded-lg bg-slate-100 p-1">
           {[{ id: 0, name: "Hammasi" }, ...MONTHS].map((m) => (
             <button
               key={m.id}
               onClick={() => setMonth(m.id)}
-              className={`rounded-md px-2 py-1.5 text-xs font-medium transition ${
+              className={`shrink-0 grow rounded-md px-2 py-1.5 text-xs font-medium whitespace-nowrap transition ${
                 month === m.id ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-900"
               }`}
             >
@@ -110,7 +119,15 @@ export default function Sidebar({ onNavigate }) {
           Bosh sahifa
         </NavLink>
 
-        {groups.length === 0 && <p className="px-3 py-6 text-center text-sm text-slate-400">Hech narsa topilmadi</p>}
+        {!data && (
+          <div className="animate-pulse space-y-2 px-3 pt-3">
+            {Array.from({ length: 10 }, (_, i) => (
+              <div key={i} className="h-4 rounded bg-slate-100" style={{ width: `${60 + ((i * 17) % 35)}%` }} />
+            ))}
+          </div>
+        )}
+
+        {data && groups.length === 0 && <p className="px-3 py-6 text-center text-sm text-slate-400">Hech narsa topilmadi</p>}
 
         {groups.map((g) => {
           const isOpen = filtering || open.has(g.id);
