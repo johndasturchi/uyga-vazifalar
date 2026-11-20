@@ -25,9 +25,10 @@ export function DataProvider({ children }) {
   const [data, setData] = useState(readCache);
   const [error, setError] = useState(null);
 
-  const load = useCallback(async () => {
+  const load = useCallback(async (fresh = false) => {
     try {
-      const res = await fetch("/api/data");
+      // fresh=true — admin o'zgartirishdan keyin keshni chetlab o'tib eng yangi ma'lumotni olish
+      const res = await fetch(fresh ? `/api/data?fresh=${Date.now()}` : "/api/data");
       if (!res.ok) throw new Error("Ma'lumotlarni yuklab bo'lmadi");
       const json = await res.json();
       setData(json);
@@ -42,7 +43,9 @@ export function DataProvider({ children }) {
     load();
   }, [load]);
 
-  return <DataContext.Provider value={{ data, error, reload: load }}>{children}</DataContext.Provider>;
+  const reload = useCallback(() => load(true), [load]);
+
+  return <DataContext.Provider value={{ data, error, reload }}>{children}</DataContext.Provider>;
 }
 
 export function useData() {

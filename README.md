@@ -1,41 +1,49 @@
 # Uyga vazifalar — Meta IT School
 
-Frontend kursining 48 ta darsi bo'yicha uyga vazifalar sayti (React + Vite + TailwindCSS).
+Frontend kursi bo'yicha uyga vazifalar sayti va admin panel.
 
-## Rasmlarni optimallashtirish
+- **Sayt:** React + Vite + TailwindCSS
+- **Admin panel:** `/admin` manzilida (parol bilan kiriladi)
+- **Server:** Vercel Functions (`api/` papkasi)
+- **Baza:** Neon PostgreSQL + Prisma ORM
+- **Fayllar:** Vercel Blob (admin panel orqali yuklangan rasm, video, musiqa)
 
-Saytda rasmlarning yengil `public/files/view/` nusxalari ko'rsatiladi, "Yuklab olish" esa asl faylni beradi. Yangi rasm qo'shsangiz, uning yengil nusxasini ham `view` papkasiga WebP (kengligi 1280px) qilib qo'ying va `lessons.js` da `view`, `w`, `h` maydonlarini to'ldiring.
+## Admin panel
 
-## Ishga tushirish (kompyuterda)
+`https://amaliyotlar.vercel.app/admin` ga kiring va parolni yozing. U yerda:
 
-```bash
-npm install
-npm run dev
-```
+- **Darslar** — dars qo'shish, tahrirlash, o'chirish; har bir darajaga (sodda / o'rta / murakkab) rasm, video yoki havola qo'shish
+- **Oylar** — yangi oy qo'shish, nomi va tavsifini o'zgartirish
+- **Resurslar** — rasm, video va musiqa yuklash yoki o'chirish
 
-Brauzerda `http://localhost:5173` ni oching.
+Yuklangan rasmlarning yengil nusxasi brauzerda avtomatik tayyorlanadi, shuning uchun sayt tez ochiladi. O'zgarishlar saytda darhol ko'rinadi.
 
-## Yangi dars qo'shish
+### Parolni o'zgartirish
 
-1. Topshiriq rasmlarini `public/files/lessons/` papkasiga joylang (masalan `lesson49_1.png`).
-2. `src/data/lessons.js` faylidagi `lessons` ro'yxatining oxiriga yangi obyekt qo'shing:
+Vercel → loyiha → **Settings → Environment Variables** → `ADMIN_PASSWORD` ni tahrirlang, so'ng **Deployments** bo'limida oxirgi deploy uchun **Redeploy** ni bosing.
 
-```js
-{
-  "id": 49,
-  "month": 5,
-  "title": "JavaScript asoslari",
-  "tasks": [
-    { "level": "sodda",    "items": [{ "type": "image", "src": "/files/lessons/lesson49_1.png" }] },
-    { "level": "orta",     "items": [{ "type": "image", "src": "/files/lessons/lesson49_2.png" }] },
-    { "level": "murakkab", "items": [{ "type": "link",  "url": "https://www.figma.com/..." }] }
-  ]
-}
-```
+## Muhit o'zgaruvchilari (Vercel'da sozlangan)
 
-- `type`: `image` (rasm), `video` (mp4) yoki `link` (Figma / boshqa sayt havolasi)
-- Yangi oy qo'shsangiz, `src/lib/meta.js` faylidagi `MONTHS` ro'yxatiga ham qo'shing.
+| Nomi | Vazifasi |
+|------|----------|
+| `DATABASE_URL`, `DATABASE_URL_UNPOOLED` | Neon baza (Vercel Marketplace orqali ulangan) |
+| `BLOB_READ_WRITE_TOKEN` | Vercel Blob fayl ombori |
+| `ADMIN_PASSWORD` | Admin panel paroli |
+| `ADMIN_SECRET` | Kirish tokenlarini imzolash kaliti |
 
 ## Deploy
 
-GitHub'ga yuklang va Vercel'da shu repozitoriyni import qiling — sozlamalar avtomatik aniqlanadi (Framework: Vite).
+Production build paytida `scripts/db-setup.mjs` avtomatik ishlaydi: Prisma migratsiyalarini bazaga qo'llaydi va baza bo'sh bo'lsa boshlang'ich 48 darsni yozadi (`prisma/seed-data.js`). Eski darslarning fayllari `public/files/` papkasida turadi.
+
+```bash
+npx vercel deploy --prod
+```
+
+## Kompyuterda ishga tushirish
+
+```bash
+npm install
+npx vercel link          # loyihani ulash
+npx vercel env pull      # .env.local faylini olish
+npx vercel dev           # sayt + API
+```

@@ -1,4 +1,5 @@
 import { isAdmin } from "./auth.js";
+import { purgeSiteData } from "./cache.js";
 
 export class HttpError extends Error {
   constructor(status, message) {
@@ -37,6 +38,7 @@ export function adminHandler(routes) {
       const fn = routes[req.method];
       if (!fn) throw new HttpError(405, "Bu amal qo'llab-quvvatlanmaydi");
       const result = await fn(req, res);
+      if (req.method !== "GET") await purgeSiteData();
       if (!res.headersSent) res.status(200).json(result ?? { ok: true });
     } catch (e) {
       sendError(res, e);
